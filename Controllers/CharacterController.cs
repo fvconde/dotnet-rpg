@@ -6,9 +6,9 @@ namespace dotnet_rpg.Controllers
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase
     {
-        private readonly CharacterService _characterService;
+        private readonly ICharacterService _characterService;
 
-        public CharacterController(CharacterService characterService)
+        public CharacterController(ICharacterService characterService)
         {
             _characterService = characterService;
         }
@@ -33,4 +33,5 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id) =>
             Ok(await _characterService.DeleteCharacters(id));
     }
+
 }
