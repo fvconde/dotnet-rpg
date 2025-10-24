@@ -33,5 +33,5 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id) =>
             Ok(await _characterService.DeleteCharacters(id));
     }
-
+        // testeee
 }
