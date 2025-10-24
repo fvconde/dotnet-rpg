@@ -12,4 +12,6 @@ namespace dotnet_rpg
             CreateMap<Skill, GetSkillDto>();
         }
     }
+
+    //testeee
 }
